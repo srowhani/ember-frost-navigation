@@ -15,7 +15,7 @@ Router.map(function () {
       navType: 'category',
       type: 'route',
       columns: category.columns,
-      controller: 'demo/redesign'
+      controller: 'demo'
     })
   })
 })

@@ -4,7 +4,7 @@ module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'dummy',
     podModulePrefix: 'dummy/pods',
-    navController: 'demo/redesign',
+    navController: 'demo',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
