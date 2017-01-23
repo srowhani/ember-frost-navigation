@@ -1,0 +1,26 @@
+<div class='frost-application-bar'>
+  <!-- Logo -->
+  {{component logo
+    hook=(concat hook '-logo')
+  }}
+
+  {{#each categories as |category index|}}
+    {{nav-category
+      options=category
+      hook=(concat hook '-category-' index)
+    }}
+  {{/each}}
+  <!-- More Content -->
+  {{yield}}
+  <!-- User Menu -->
+  {{component menu
+    hook=(concat hook '-menu')
+  }}
+</div>
+{{to-elsewhere
+  named='navigation'
+  send=(hash
+    modal=(component 'nav-modal')
+    active=activeCategory
+  )
+}}
